@@ -35,6 +35,7 @@ def main():
 
     current_direction = None
     game_over = False
+    running = True
 
     while running:
         keys = pygame.key.get_pressed()
@@ -56,6 +57,9 @@ def main():
             elif event.type == pygame.KEYUP:
                 if event.key in directions:
                     current_direction = None
+
+        if not running:
+            break
 
         if current_direction:
             # Обновленный вызов move_player с передачей всех аргументов
@@ -86,13 +90,13 @@ def main():
             game_map, crow_positions, tree_pos, add_message, step_count, TREE_HEALTH, frozen_crows
         )
         if not game_over:
-        draw_interface(screen, TREE_HEALTH, PLAYER_HEALTH, PLAYER_MANA)
-        draw_trap_interface(screen, traps, selected_trap)
-        draw_ascii_map(screen, game_map, crow_positions, projectiles)
-        draw_terminal(screen, messages)
+            draw_interface(screen, TREE_HEALTH, PLAYER_HEALTH, PLAYER_MANA)
+            draw_trap_interface(screen, traps, selected_trap)
+            draw_ascii_map(screen, game_map, crow_positions, projectiles)
+            draw_terminal(screen, messages)
         pygame.display.flip()
         clock.tick(FPS)
-   pygame.quit()
+    pygame.quit()
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,7 @@
 # TreePygame
 
+> Public source preview: see [PUBLICATION.md](PUBLICATION.md) for actual checks, known failures and runtime limits.
+
 ## О проекте
 
 `TreePygame` — мистический survival/defense-прототип вокруг центральной идеи дерева, маны, ловушек, карты и враждебных существ. Проект разбит на игровые подсистемы, поэтому хорошо читается как каркас для более крупной авторской игры.
@@ -28,3 +30,8 @@ python main.py
 ## Статус
 
 `WIP`. Это уже оформленный игровой каркас, но проект выглядит как развиваемый прототип с несколькими поколениями механик.
+
+
+## Public source status — 2026-10-29
+
+See [PUBLICATION.md](PUBLICATION.md) for the current verification scope, prototype limitations and runtime boundaries. Earlier audit checklists describe historical work.
